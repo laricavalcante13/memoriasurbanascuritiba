@@ -173,12 +173,12 @@ h1#nome-monumento {
     font-size: 1rem;
 }
 
-/* Rodapé com Link do Forms */
 footer {
     background: var(--cor-museu-escura);
     color: white;
     padding: 40px 25px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .btn-pesquisa {
