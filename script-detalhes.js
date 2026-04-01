@@ -16,7 +16,7 @@ async function carregarDetalhes() {
             document.title = `Memórias Urbanas | ${monumento.nome_popular}`;
             document.getElementById('categoria').innerText = monumento.categoria;
             document.getElementById('foto-monumento').src = monumento.imagem;
-            document.getElementById('nome-monumento').innerText = monumento.nome_popular;
+            document.getElementById('nome-monumento').innerText = monumento.nome_oficial;
             document.getElementById('autor-monumento').innerText = monumento.autor;
             document.getElementById('ano-monumento').innerText = monumento.ano;
             document.getElementById('historia-texto').innerHTML = monumento.historia;
