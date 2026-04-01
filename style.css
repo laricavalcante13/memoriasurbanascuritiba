@@ -173,6 +173,16 @@ h1#nome-monumento {
     font-size: 1rem;
 }
 
+.titulo-mapa {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--cor-destaque);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
 footer {
     background: var(--cor-museu-escura);
     color: white;
@@ -317,3 +327,11 @@ h1 {
     font-size: 1.5rem;
     z-index: 100;
 }
+
+#mapa { 
+        height: 300px; 
+        width: 100%; 
+        border-radius: 12px; 
+        margin-top: 20px;
+        z-index: 1; /* Garante que o mapa não fique por cima de menus */
+    }

@@ -21,6 +21,25 @@ async function carregarDetalhes() {
             document.getElementById('ano-monumento').innerText = monumento.ano;
             document.getElementById('historia-texto').innerHTML = monumento.historia;
             document.getElementById('curiosidade-texto').innerText = monumento.curiosidade;
+
+            if (monumento.latitude && monumento.longitude) {
+                const lat = monumento.latitude;
+                const lon = monumento.longitude;
+
+                // 1. Inicializa o mapa centralizado no monumento
+                const map = L.map('mapa').setView([lat, lon], 16);
+
+                // 2. Adiciona as "peças" do mapa (estilo visual)
+                // Esse estilo 'CartoDB.Positron' é bem limpo e combina com o tema "museu"
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+
+                // 3. Adiciona o marcador (o "pin") no local exato
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup(`<b>${monumento.nome_popular}</b><br>Curitiba, PR`)
+                    .openPopup();
+            }
             
             // Link do Forms (ajuste conforme o seu ID do Google Forms)
             const linkFeedback = document.getElementById('link-feedback');
