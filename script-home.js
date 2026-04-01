@@ -1,6 +1,7 @@
 //Lógica do instascan em home.html para ler o QR Code e redirecionar para a página com o ID do monumento
 let scanner = new Instascan.Scanner({
   video: document.getElementById('preview'),
+  scanPeriod: 5,
   mirror: false // Importante para ler QR Codes sem espelhar
 });
 
@@ -13,7 +14,7 @@ scanner.addListener('scan', function (content) {
 Instascan.Camera.getCameras().then(function (cameras) {
   if (cameras.length > 0) {
     // Tenta pegar a câmera traseira (geralmente a última da lista no Android/Chrome)
-    let selectedCam = cameras[cameras.length - 1];
+    let selectedCam = cameras[cameras.length - 0];
     scanner.start(selectedCam);
   }
   else {
