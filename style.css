@@ -17,7 +17,7 @@ body {
 
 .header-home {
     padding: 40px 20px;
-    border-bottom: 1px solid #d7ccc8;
+    border-bottom: 1px solid var(--cor-borda);
 }
 
 h1 {
@@ -30,14 +30,14 @@ h1 {
 .scanner-container {
     width: 100%;
     max-width: 500px;
-    min-height: 300px; /* Garante que a área exista mesmo antes da câmera abrir */
+    min-height: 300px; 
     margin: 20px auto;
-    background-color: #000; /* Fundo preto para você ver onde ele está */
+    background-color: #000; 
     border-radius: 12px;
     overflow: hidden;
 }
 
-/* Isso força os botões e textos da biblioteca a aparecerem com destaque */
+/* força os botões e textos da biblioteca a aparecerem com destaque */
 #reader {
     border: none !important;
     padding: 10px;
@@ -45,7 +45,7 @@ h1 {
 
 #reader button {
     padding: 10px 20px;
-    background-color: #bf360c; /* Cor de destaque do seu projeto */
+    background-color: var(--cor-destaque); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -61,7 +61,6 @@ h1 {
     color: #795548;
 }
 
-/* Botão para quem não quer usar a câmera */
 .btn-lista {
     display: inline-block;
     margin-top: 20px;
@@ -70,7 +69,6 @@ h1 {
     font-weight: 700;
     border-bottom: 1px solid var(--cor-destaque);
 }
-
 
 * {
     box-sizing: border-box;
@@ -331,5 +329,5 @@ h1 {
         width: 100%; 
         border-radius: 12px; 
         margin-top: 20px;
-        z-index: 1; /* Garante que o mapa não fique por cima de menus */
+        z-index: 1;
     }
