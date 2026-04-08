@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const qrCodeSuccessCallback = (decodedText, decodedResult) => {
         html5QrCode.stop().then(() => {
-            window.location.href = `index.html?id=${decodedText}`;
+            window.location.href = decodedText;
         });
     };
 
