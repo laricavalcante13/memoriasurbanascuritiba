@@ -1,4 +1,4 @@
-// 1. Pega o ID que veio na URL (ex: ?id=cavalo-babao)
+// 1. Pega o ID que veio na URL
 const urlParams = new URLSearchParams(window.location.search);
 const monumentoId = urlParams.get('id');
 
@@ -30,7 +30,6 @@ async function carregarDetalhes() {
                 const map = L.map('mapa').setView([lat, lon], 16);
 
                 // 2. Adiciona as "peças" do mapa (estilo visual)
-                // Esse estilo 'CartoDB.Positron' é bem limpo e combina com o tema "museu"
                 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; OpenStreetMap contributors'
                 }).addTo(map);
@@ -41,7 +40,7 @@ async function carregarDetalhes() {
                     .openPopup();
             }
             
-            // Link do Forms (ajuste conforme o seu ID do Google Forms)
+            // Link do Forms (ajuste conforme o ID do Google Forms)
             const linkFeedback = document.getElementById('link-feedback');
             if(linkFeedback) {
                 linkFeedback.href = `https://forms.gle/VGrrdsTBfBEYJcrq9?entry.12345=${monumento.nome_oficial}`;

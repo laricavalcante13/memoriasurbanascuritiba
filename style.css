@@ -3,8 +3,6 @@
     --cor-museu: #5d4037;
     --cor-destaque: #bf360c;
     --cor-texto: #2c2c2c;
-    --cor-museu-escura: #5d4037;
-    --cor-destaque: #bf360c;
     --cor-borda: #d7ccc8;
 }
 
@@ -132,7 +130,7 @@ body {
 h1#nome-monumento {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
-    color: var(--cor-museu-escura);
+    color: var(--cor-museu);
     line-height: 1.2;
     margin-bottom: 5px;
 }
@@ -165,7 +163,7 @@ h1#nome-monumento {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
     margin-bottom: 10px;
-    color: var(--cor-museu-escura);
+    color: var(--cor-museu);
 }
 
 #curiosidade-texto {
@@ -184,7 +182,7 @@ h1#nome-monumento {
 }
 
 footer {
-    background: var(--cor-museu-escura);
+    background: var(--cor-museu);
     color: white;
     padding: 40px 25px;
     text-align: center;
@@ -210,7 +208,7 @@ footer {
     top: 20px;
     left: 20px;
     background: rgba(255, 255, 255, 0.8);
-    color: var(--cor-museu-escura);
+    color: var(--cor-museu);
     padding: 8px 15px;
     border-radius: 20px;
     text-decoration: none;
@@ -242,7 +240,7 @@ header {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: var(--cor-museu-escura);
+    color: var(--cor-museu);
 }
 
 .subtitle {
@@ -295,7 +293,7 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     margin-bottom: 4px;
-    color: var(--cor-museu-escura);
+    color: var(--cor-museu);
 }
 
 .card-info p {
